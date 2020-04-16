@@ -13,7 +13,9 @@ It has a handful of cool features:
 * __Fast Lookups__: File metadata is stored in a distributed trie structure, meaning files can be located with minimal network lookups.
 * __Version Tagging__: You can assign string names to Hyperdrive versions and store these within the drive, making it straightforward to switch between semantically-meaningful versions.
 
-You can use Hyperdrive standalone within your applications, or you can use it through the [Hyperdrive daemon](https://github.com/andrewosh/hyperdrive-daemon) which handles storage and DHT networking for you. The daemon provides both a gRPC API for managing remote Hyperdrives, and a FUSE API that turns Hyperdrives into normal folders on your computer.
+You can use Hyperdrive standalone within your applications, or you can use it through the [Hyperdrive daemon](https://github.com/andrewosh/hyperdrive-daemon), which handles storage and DHT networking for you.
+
+The daemon provides both a gRPC API for managing remote Hyperdrives, and a FUSE API that turns Hyperdrives into normal folders on your computer.
 
 ## Installation
 ``` js
