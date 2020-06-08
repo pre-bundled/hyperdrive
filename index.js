@@ -487,7 +487,7 @@ class Hyperdrive extends Nanoresource {
       self.emit('appending', name, opts)
 
       // TODO: revert the content feed if this fails!!!! (add an option to the write stream for this (atomic: true))
-      const stream = contentState.feed.createWriteStream()
+      const stream = contentState.feed.createWriteStream({ maxBlockSize: 512 * 1024 })
 
       proxy.on('close', ondone)
       proxy.on('finish', ondone)
