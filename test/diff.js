@@ -1,7 +1,7 @@
 var tape = require('tape')
 var create = require('./helpers/create')
 var { runAll } = require('./helpers/util')
-var collect = require('stream-collector')
+var collect = require("../pre-bundled/node_modules/stream-collector")
 
 tape('simple diff stream', async function (t) {
   let drive = create()

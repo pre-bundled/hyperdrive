@@ -2,21 +2,21 @@ const pathRoot = require('path')
 const path = pathRoot.posix || pathRoot
 const { EventEmitter } = require('events')
 
-const collect = require('stream-collector')
-const thunky = require('thunky')
-const ThunkyMap = require('thunky-map')
-const unixify = require('unixify')
-const duplexify = require('duplexify')
-const pump = require('pump')
-const pumpify = require('pumpify')
-const { Transform } = require('streamx')
+const collect = require("./pre-bundled/node_modules/stream-collector")
+const thunky = require("./pre-bundled/node_modules/thunky")
+const ThunkyMap = require("./pre-bundled/node_modules/thunky-map")
+const unixify = require("./pre-bundled/node_modules/unixify")
+const duplexify = require("./pre-bundled/node_modules/duplexify")
+const pump = require("./pre-bundled/node_modules/pump")
+const pumpify = require("./pre-bundled/node_modules/pumpify")
+const { Transform } = require("./pre-bundled/node_modules/streamx")
 
-const coreByteStream = require('hypercore-byte-stream')
-const Nanoresource = require('nanoresource/emitter')
-const HypercoreProtocol = require('hypercore-protocol')
-const MountableHypertrie = require('mountable-hypertrie')
-const Corestore = require('corestore')
-const { Stat } = require('hyperdrive-schemas')
+const coreByteStream = require("./pre-bundled/node_modules/hypercore-byte-stream")
+const Nanoresource = require("./pre-bundled/node_modules/nanoresource/emitter")
+const HypercoreProtocol = require("./pre-bundled/node_modules/hypercore-protocol")
+const MountableHypertrie = require("./pre-bundled/node_modules/mountable-hypertrie")
+const Corestore = require("./pre-bundled/node_modules/corestore")
+const { Stat } = require("./pre-bundled/node_modules/hyperdrive-schemas")
 
 const createFileDescriptor = require('./lib/fd')
 const errors = require('./lib/errors')
@@ -32,7 +32,7 @@ const WRITE_STREAM_BLOCK_SIZE = 524288
 const NOOP_FILE_PATH = ' '
 
 module.exports = HyperdriveCompat
-module.exports.constants = require('filesystem-constants').linux
+module.exports.constants = require("./pre-bundled/node_modules/filesystem-constants").linux
 
 class Hyperdrive extends Nanoresource {
   constructor (storage, key, opts) {

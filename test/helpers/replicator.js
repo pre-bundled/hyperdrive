@@ -1,5 +1,5 @@
-const { Transform } = require('streamx')
-const pumpify = require('pumpify')
+const { Transform } = require("../../pre-bundled/node_modules/streamx")
+const pumpify = require("../../pre-bundled/node_modules/pumpify")
 
 module.exports = class Replicator {
   constructor (t) {

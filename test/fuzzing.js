@@ -1,5 +1,5 @@
 const tape = require('tape')
-const collect = require('stream-collector')
+const collect = require("../pre-bundled/node_modules/stream-collector")
 
 const FuzzBuzz = require('fuzzbuzz')
 const create = require('./helpers/create')
